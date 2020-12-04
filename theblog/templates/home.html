@@ -1,4 +1,5 @@
 {%  extends 'base.html' %}
+{% block title  %}Home page{% endblock %}
 {% block content %}
 
 
@@ -6,7 +7,12 @@
 <br>
 {% for post in object_list %}
     <ul>
-        <li><a href="{% url 'article-detail' post.pk %}"> {{ post.title }}</a> - {{ post.author.first_name }} {{ post.author.last_name }} - {{ post.author.email }} - {{ post.post_date }} - <small> <a href="{% url 'update_post' post.pk %}">(Edit)</a> </small><small> <a href="{% url 'delete_post' post.pk %}">(Delete)</a> </small><br>
+        <li>
+            <a href="{% url 'article-detail' post.pk %}"> {{ post.title }}</a>
+             - {{ post.author.first_name }} {{ post.author.last_name }}
+              - {{ post.author.email }} - {{ post.post_date }} 
+              - <small> <a href="{% url 'update_post' post.pk %}">(Edit)</a> </small>
+              <small> <a href="{% url 'delete_post' post.pk %}">(Delete)</a> </small><br>
             {{ post.body }}
         </li>
     </ul>
