@@ -3,14 +3,14 @@
 {% block content %}
 
 
-<h1>Update Blog Post</h1>
+<h1>Delete Post .....</h1>
 <br><br>
+<h3>Delete: {{Post.title}}</h3>
 <div class="form-group">
     <form method="post">
     
         {% csrf_token %}
-        {{ form.as_p }}
-        <button class="btn btn-secondary">Update</button>
+        <button class="btn btn-secondary">Delete</button>
         
     </form>
 </div>

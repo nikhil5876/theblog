@@ -7,7 +7,7 @@
 
 <h1>{{ post.title }}</h1>
 <br><br>
-<small> By: {{ post.author.first_name }} {{ post.author.last_name }}</small> - <small> <a href="{% url 'update_post' post.pk %}">(Edit)</a> </small>
+<small> By: {{ post.author.first_name }} - {{ post.post_date }} </small> - <small> <a href="{% url 'update_post' post.pk %}">(Edit)</a> </small>
 <br>
 <hr>
 <br>
